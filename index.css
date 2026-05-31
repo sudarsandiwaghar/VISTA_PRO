@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300; }
+}
+
+@layer components {
+  .glass { @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl; }
+  .glass-card { @apply glass rounded-2xl p-6 hover:shadow-2xl transition-all duration-300; }
+  .btn-primary { @apply px-6 py-2.5 rounded-xl bg-vista-gradient text-white font-semibold hover:opacity-90 transition shadow-lg shadow-indigo-500/30; }
+  .btn-secondary { @apply px-6 py-2.5 rounded-xl border border-vista-500 text-vista-600 dark:text-vista-400 font-semibold hover:bg-vista-500/10 transition; }
+  .input-field { @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 focus:ring-2 focus:ring-vista-500 outline-none transition; }
+  .page-title { @apply text-3xl font-bold bg-vista-gradient bg-clip-text text-transparent; }
+  .stat-card { @apply glass-card animate-pulse-slow; }
+}
